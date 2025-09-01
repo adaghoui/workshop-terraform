@@ -1,0 +1,19 @@
+{
+  "title": "Terraform Hello World",
+  "description": "Getting started with Terraform.",
+  "difficulty": "beginner",
+  "time": "15 minutes",
+  "details": {
+    "steps": [
+      { "title": "Step 1 - Prepare your configuration", "text": "step1.md" },
+      { "title": "Step 2 - Init and Apply", "text": "step2.md" }
+    ]
+  },
+  "environment": {
+    "showide": true,
+    "terminal": true
+  },
+  "backend": {
+    "imageid": "ubuntu:2004"
+  }
+}
