@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+#set -e
 
 # Install dependencies
 apt-get update -y
