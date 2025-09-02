@@ -1,48 +1,21 @@
 {
   "title": "Terraform Get Started",
-  "description": "Hands-on introduction to Terraform with a Hello World example.",
+  "description": "Hands-on intro to Terraform with a Hello World example.",
   "details": {
-    "intro": {
-      "text": "step0.md"
-    },
     "steps": [
-      {
-        "title": "Step 0 - Concepts Recap",
-        "text": "step0.md"
-      },
-      {
-        "title": "Step 1 - Configure Terraform",
-        "text": "step1.md"
-      },
-      {
-        "title": "Step 2 - Create a Resource",
-        "text": "step2.md"
-      }
+      { "title": "Step 0 – Concepts Recap", "text": "step0.md" },
+      { "title": "Step 1 – Configure Terraform", "text": "step1.md" },
+      { "title": "Step 2 – Create a Resource", "text": "step2.md" }
     ],
     "assets": {
       "host01": [
-        {
-          "file": "background.sh",
-          "target": "/root/background.sh"
-        },
-        {
-          "file": "terraform/terraform.tf",
-          "target": "/root/terraform/terraform.tf"
-        },
-        {
-          "file": "terraform/provider.tf",
-          "target": "/root/terraform/provider.tf"
-        },
-        {
-          "file": "terraform/main.tf",
-          "target": "/root/terraform/main.tf"
-        }
+        { "file": "background.sh", "target": "/root/background.sh" },
+        { "file": "terraform/terraform.tf", "target": "/root/terraform/terraform.tf" },
+        { "file": "terraform/provider.tf", "target": "/root/terraform/provider.tf" },
+        { "file": "terraform/main.tf", "target": "/root/terraform/main.tf" }
       ]
     },
     "environment": {
-      "showdashboard": false,
-      "dashboards": [],
-      "uimessage": "Terraform is being installed. Please wait a moment...",
       "terminals": [
         {
           "name": "Terraform Terminal",
@@ -52,7 +25,5 @@
       ]
     }
   },
-  "backend": {
-    "imageid": "ubuntu:2004"
-  }
+  "backend": { "imageid": "ubuntu:2004" }
 }
