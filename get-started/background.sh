@@ -1,21 +1,21 @@
 #!/bin/bash
 set -e
 
-# Update package lists and install dependencies
+# Install dependencies
 apt-get update -y
 apt-get install -y wget unzip
 
-# Download and install the latest Terraform version
+# Install Terraform
 TERRAFORM_VERSION="1.13.1"
 wget https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip
 
-# Extract the Terraform binary, overwrite if it exists
+# Unzip Terraform binary and overwrite if exists
 unzip -o terraform_${TERRAFORM_VERSION}_linux_amd64.zip
 
-# Move Terraform binary to system PATH
+# Move Terraform binary to /usr/local/bin
 mv terraform /usr/local/bin/
 
-# Verify Terraform installation
+# Check Terraform version
 terraform -version
 
 # Create Terraform working directory
