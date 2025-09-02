@@ -18,9 +18,7 @@
     ],
     "assets": {
       "host01": [
-        { "file": "terraform/terraform.tf", "target": "/root/terraform/terraform.tf" },
-        { "file": "terraform/provider.tf", "target": "/root/terraform/provider.tf" },
-        { "file": "terraform/main.tf", "target": "/root/terraform/main.tf" }
+        { "file": "terraform/", "target": "/root/terraform/" }
       ]
     },
     "environment": {
