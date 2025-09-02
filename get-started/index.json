@@ -2,6 +2,10 @@
   "title": "Terraform Get Started",
   "description": "Hands-on intro to Terraform with a Hello World example.",
   "details": {
+    "intro": {
+      "text": "step0.md",
+      "foreground": "background.sh"
+    },
     "steps": [
       { "title": "Step 0 – Concepts Recap", "text": "step0.md" },
       { "title": "Step 1 – Configure Terraform", "text": "step1.md" },
@@ -25,5 +29,7 @@
       ]
     }
   },
-  "backend": { "imageid": "ubuntu:2004" }
+  "backend": {
+    "imageid": "ubuntu:2004"
+  }
 }
