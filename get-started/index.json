@@ -1,6 +1,6 @@
 {
   "title": "Terraform Get Started",
-  "description": "Introduction pratique à Terraform avec un exemple Hello World.",
+  "description": "Introduction pratique à Terraform avec des exemples Local et Apigee Edge.",
   "details": {
     "intro": {
       "text": "step0.md",
@@ -8,21 +8,21 @@
     },
     "steps": [
       {
-        "title": "Step 1 – Configure Terraform",
+        "title": "Step 1 – Local Provider",
         "text": "step1.md"
       },
       {
-        "title": "Step 2 – Create a Resource",
+        "title": "Step 2 – Apigee Edge Provider",
         "text": "step2.md"
       }
     ],
     "assets": {
       "host01": [
-        { "file": "terraform/*", "target": "/root" }
+        { "file": "terraform/*", "target": "/root/" }
       ]
     },
     "environment": {
-      "uilayout": "editor-terminal",
+      "uilayout": "split-vertical",
       "terminals": [
         {
           "name": "Terraform Terminal",

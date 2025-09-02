@@ -1,20 +1,13 @@
-# Step 0 - Terraform Concepts Recap
+# Step 0 – Terraform Concepts
 
-Terraform is an **Infrastructure as Code (IaC)** tool that lets you define and manage your infrastructure using code.
+Terraform is an **Infrastructure as Code (IaC)** tool that allows you to manage cloud and local resources declaratively.
 
-### Key points:
+Key concepts:
 
-- **Terraform CLI**: Tool to run commands like `init`, `plan`, `apply`, etc.
-  - **`terraform init`**: Initializes the working directory and downloads required providers.
-  - **`terraform plan`**: Shows what changes Terraform will make.
-  - **`terraform apply`**: Applies the changes and creates the resources.
-- **Providers**: Plugins that allow Terraform to interact with services/APIs.  
-  - Example: `local` provider allows creating files locally.
-- **Terraform configuration files (`*.tf`)**: Define infrastructure in code.
-  - **Terraform block**: Specifies required providers and versions.
-  - **Provider block**: Configures the provider.
-  - **Resource block**: Represents infrastructure objects like servers, storage buckets, or files.
-- **State**: Terraform keeps track of managed resources in a state file.
+- **Terraform CLI**: Command-line tool to execute Terraform commands.
+- **Providers**: Plugins that allow Terraform to interact with APIs (e.g., AWS, Apigee, Local).
+- **Configuration files**: `.tf` files define the infrastructure you want to create.
+- **State**: Terraform keeps track of resources it manages in a state file.
+- **Modules**: Reusable blocks of Terraform code.
 
-> 💡 Think of Terraform as a “translator” between your code and real infrastructure.  
-> 🔹 `terraform init` must be run **before** `plan` or `apply` to set up the environment.
+> In the next steps, you'll practice with three different providers: Local, Apigee, and AWS.
