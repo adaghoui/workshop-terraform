@@ -1,20 +1,14 @@
 {
   "title": "Terraform Get Started",
-  "description": "Introduction pratique à Terraform avec un exemple Hello World.",
+  "description": "Intro to Terraform: Hello World example.",
   "details": {
     "intro": {
       "text": "step0.md",
       "foreground": "background.sh"
     },
     "steps": [
-      {
-        "title": "Step 1 – Configure Terraform",
-        "text": "step1.md"
-      },
-      {
-        "title": "Step 2 – Create a Resource",
-        "text": "step2.md"
-      }
+      { "title": "Step 1", "text": "step1.md" },
+      { "title": "Step 2", "text": "step2.md" }
     ],
     "assets": {
       "host01": [
@@ -22,19 +16,7 @@
         { "file": "terraform/provider.tf", "target": "/root/terraform/provider.tf" },
         { "file": "terraform/main.tf", "target": "/root/terraform/main.tf" }
       ]
-    },
-    "environment": {
-      "uilayout": "editor-terminal",
-      "terminals": [
-        {
-          "name": "Terraform Terminal",
-          "target": "host01",
-          "workingDir": "/root/terraform"
-        }
-      ]
     }
   },
-  "backend": {
-    "imageid": "ubuntu:2004"
-  }
+  "backend": { "imageid": "ubuntu" }
 }
