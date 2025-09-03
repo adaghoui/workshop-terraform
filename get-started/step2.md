@@ -1,51 +1,38 @@
-# Step 2 – Apigee Edge Provider
+# Step 2 – Apigee Provider
 
-In this step, you will use the **Apigee Edge provider** to manage resources in Apigee.
-
-We will create a **KVM (Key-Value Map)** as an example resource.
+The Apigee provider allows Terraform to manage **Apigee Edge Cloud resources** such as KVMs.
 
 ## Files
 
-- `terraform.tf` – general Terraform configuration (required version, backend, etc.)
-- `provider.tf` – configures the Apigee Edge provider and credentials
-- `main.tf` – defines a KVM resource
-- `variables.tf` – contains default values for org/env and declares username/password variables
+- `terraform.tf` – general Terraform configuration (required version, backend, etc.)  
+- `provider.tf` – defines the Apigee provider (authentication, organization, environment)  
+- `variables.tf` – declares `apigee_token`, `apigee_org`, and `apigee_env` variables  
+- `main.tf` – creates an Apigee environment-scoped Key Value Map (KVM)  
 
 ## Commands
 
 ```bash
+# Set your Apigee token from browser or CLI
+export TF_VAR_apigee_token="eyJhbGciOiJSUzI1NiIs..."
+
+# Optionally override defaults
+export TF_VAR_apigee_org="my-org"
+export TF_VAR_apigee_env="test"
+
 cd /root/terraform/apigee
-
-# Set your Apigee credentials as environment variables
-export TF_VAR_apigee_user="your-username"
-export TF_VAR_apigee_password="your-password"
-
-terraform init       # Initialize the working directory
-terraform plan       # Preview the creation of the KVM
-terraform apply      # Apply the configuration to create the KVM
-```
-
-## Example `main.tf`
-
-```hcl
-resource "apigee_kvm" "example" {
-  name = "demo-kvm"
-  env  = var.apigee_env
-
-  entry {
-    name  = "key1"
-    value = "value1"
-  }
-}
+terraform init
+terraform apply
 ```
 
 ## Expected Result
 
-- Terraform creates a KVM named `demo-kvm` in the specified Apigee environment.  
-- You can verify it in the Apigee Edge Cloud UI under **Admin > Key Value Maps**.
+- Terraform creates a KVM named `terraform-demo-kvm` in the chosen Apigee environment (`dev` by default).  
+- The KVM contains two entries:  
+  - `first = "firstValue"`  
+  - `second = "secondValue"`  
 
 ## Notes
 
-- The provider uses `TF_VAR_apigee_user` and `TF_VAR_apigee_password` for authentication.  
-- Default values are provided for `apigee_org` and `apigee_env` in `variables.tf`.
-- This step demonstrates how Terraform can manage **Apigee Edge resources declaratively**.
+- Authentication is done using an **access token** instead of username/password.  
+- You can extract the token from your browser cookies (`access_token`).  
+- This step shows how Terraform can automate **Apigee environment configuration**.  
