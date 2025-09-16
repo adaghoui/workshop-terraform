@@ -1,27 +1,21 @@
-# Step 1 – Local Provider
+# 🚀 Step 1 – Run Your First Container
 
-The Local provider allows Terraform to manage **local resources** on your machine.
-
-## Files
-
-- `terraform.tf` – general Terraform configuration (required version, backend, etc.)
-- `provider.tf` – defines the local provider
-- `main.tf` – creates a local file as a demo
-
-## Commands
+Check if Docker is working by running the classic hello-world image:
 
 ```bash
-cd /root/terraform/local
-terraform init       # Initialize the working directory
-terraform apply      # Apply the configuration and create the local file
+docker run hello-world
 ```
 
-## Expected Result
+Now, let’s run an **Nginx web server**:
 
-- Terraform creates a file `hello-local.txt` in the same directory with content: Hello from Local Provider!
+```bash
+docker run -d -p 8080:80 nginx
+```
 
-## Notes
+Test it:
 
-- `terraform.tf` contains global settings for Terraform.
-- This step helps you understand how Terraform works with a provider that manages **local files**.
-- You can inspect the generated file to see the output.
+```bash
+curl localhost:8080
+```
+
+👉 You should see the default Nginx welcome page.

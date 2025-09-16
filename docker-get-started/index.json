@@ -1,6 +1,6 @@
 {
   "title": "Docker Get Started",
-  "description": "Introduction pratique à Docker avec des conteneurs et la création d'une image.",
+  "description": "Hands-on introduction to Docker: running containers and building your own image.",
   "details": {
     "intro": {
       "text": "step0.md",
@@ -8,19 +8,19 @@
     },
     "steps": [
       {
-        "title": "Step 1 – Premier conteneur",
+        "title": "Step 1 – Run Your First Container",
         "text": "step1.md"
       },
       {
-        "title": "Step 2 – Explorer les conteneurs",
+        "title": "Step 2 – Explore Containers",
         "text": "step2.md"
       },
       {
-        "title": "Step 3 – Créer un Dockerfile",
+        "title": "Step 3 – Create a Dockerfile",
         "text": "step3.md"
       },
       {
-        "title": "Step 4 – Construire et lancer son image",
+        "title": "Step 4 – Build and Run Your Image",
         "text": "step4.md"
       }
     ],

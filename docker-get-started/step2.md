@@ -1,38 +1,22 @@
-# Step 2 – Apigee Provider
+# 🔍 Step 2 – Explore Containers
 
-The Apigee provider allows Terraform to manage **Apigee Edge Cloud resources** such as KVMs.
-
-## Files
-
-- `terraform.tf` – general Terraform configuration (required version, backend, etc.)  
-- `provider.tf` – defines the Apigee provider (authentication, organization, environment)  
-- `variables.tf` – declares `apigee_token`, `apigee_org`, and `apigee_env` variables  
-- `main.tf` – creates an Apigee environment-scoped Key Value Map (KVM)  
-
-## Commands
+List running containers:
 
 ```bash
-# Set your Apigee token from browser or CLI
-export TF_VAR_apigee_token="eyJhbGciOiJSUzI1NiIs..."
-
-# Optionally override defaults
-export TF_VAR_apigee_org="my-org"
-export TF_VAR_apigee_env="test"
-
-cd /root/terraform/apigee
-terraform init
-terraform apply
+docker ps
 ```
 
-## Expected Result
+Stop and restart your Nginx container:
 
-- Terraform creates a KVM named `terraform-demo-kvm` in the chosen Apigee environment (`dev` by default).  
-- The KVM contains two entries:  
-  - `first = "firstValue"`  
-  - `second = "secondValue"`  
+```bash
+docker stop <id>
+docker start <id>
+```
 
-## Notes
+Open a shell inside the container:
 
-- Authentication is done using an **access token** instead of username/password.  
-- You can extract the token from your browser cookies (`access_token`).  
-- This step shows how Terraform can automate **Apigee environment configuration**.  
+```bash
+docker exec -it <id> bash
+```
+
+👉 Remember: **Images are templates**, while **containers are running instances**.
