@@ -1,0 +1,41 @@
+{
+  "title": "Docker Get Started",
+  "description": "Hands-on introduction to Docker: running containers and building your own image.",
+  "details": {
+    "intro": {
+      "text": "step0.md",
+      "foreground": "background.sh"
+    },
+    "steps": [
+      {
+        "title": "Step 1 – Run Your First Container",
+        "text": "step1.md"
+      },
+      {
+        "title": "Step 2 – Explore Containers",
+        "text": "step2.md"
+      },
+      {
+        "title": "Step 3 – Create a Dockerfile",
+        "text": "step3.md"
+      },
+      {
+        "title": "Step 4 – Build and Run Your Image",
+        "text": "step4.md"
+      }
+    ],
+    "environment": {
+      "uilayout": "split-vertical",
+      "terminals": [
+        {
+          "name": "Docker Terminal",
+          "target": "host01",
+          "workingDir": "/root"
+        }
+      ]
+    }
+  },
+  "backend": {
+    "imageid": "ubuntu:2004"
+  }
+}

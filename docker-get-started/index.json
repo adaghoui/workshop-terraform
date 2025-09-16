@@ -1,0 +1,41 @@
+{
+  "title": "Docker Get Started",
+  "description": "Introduction pratique à Docker avec des conteneurs et la création d'une image.",
+  "details": {
+    "intro": {
+      "text": "step0.md",
+      "foreground": "background.sh"
+    },
+    "steps": [
+      {
+        "title": "Step 1 – Premier conteneur",
+        "text": "step1.md"
+      },
+      {
+        "title": "Step 2 – Explorer les conteneurs",
+        "text": "step2.md"
+      },
+      {
+        "title": "Step 3 – Créer un Dockerfile",
+        "text": "step3.md"
+      },
+      {
+        "title": "Step 4 – Construire et lancer son image",
+        "text": "step4.md"
+      }
+    ],
+    "environment": {
+      "uilayout": "split-vertical",
+      "terminals": [
+        {
+          "name": "Docker Terminal",
+          "target": "host01",
+          "workingDir": "/root"
+        }
+      ]
+    }
+  },
+  "backend": {
+    "imageid": "ubuntu:2004"
+  }
+}
